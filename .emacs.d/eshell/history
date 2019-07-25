@@ -1,0 +1,37 @@
+ls
+scp 10.101.193.223:/home/qingran.yz/.emacs.d/init.el ~/.emacs.d/
+scp hippo@10.101.193.223:/home/qingran.yz/.emacs.d/init.el ~/.emacs.d/
+cd
+ls
+ls
+cd ..
+l
+sls
+ls
+cd ..
+ls
+cd abxp
+ls
+cd build_service/
+ls
+cd build_service/
+ls
+cd admin
+ls
+ks
+ls
+ls
+cd
+ls
+cd abxp/
+ls
+cd build_service/
+ls
+cd build_service/
+ls
+cd admin
+ls
+ls
+ls
+ls
+ls

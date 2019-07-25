@@ -1,0 +1,34 @@
+#ifndef NODE48_CPP
+#define NODE48_CPP
+
+#include "node48.h"
+
+namespace art{
+
+  template <class T>
+  node48<T>::node48(){
+    std::fill(child_index_, child_index_+256, EMPTY);
+    std::fill(child_pointer_, child_pointer_+48, nullptr);
+  }
+  
+  template <class T>
+  node<T> *node48<T>::find_child(char partial_key) override {
+    if(child_index_[partial_key] == EMPTY) return nullptr;
+    return child_pointer_[child_index_[partial_key]];
+  }
+
+  template <class T>
+  void node48<T>::set_child(char partial_key, node<T> *child) overide{
+    child_index_[partial_key] = n_children_;
+    child_pointer_[n_children_] = child;
+    ++n_children_;
+  }
+
+  template <class T>
+  void del_
+  
+}
+
+
+
+#endif

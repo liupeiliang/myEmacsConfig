@@ -1,0 +1,64 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/" . "usr/")
+ ("/home/peiliang.lpl/.emacs.d/" . "auto-save-list/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/peiliang.lpl/myART/include/"
+ "/home/peiliang.lpl/abxp/build_service/build_service/admin/"
+ "/home/peiliang.lpl/adaptive-radix-tree/src/"
+ "/home/peiliang.lpl/MyTest/gtest_test/"
+ "/home/peiliang.lpl/abxp/build_service/build_service/test/"
+ "/home/peiliang.lpl/libart/src/"
+ "/home/peiliang.lpl/.emacs.d/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "node4.cpp"
+ "inner_node.h"
+ "node4.h"
+ ".#inner_node.cpp"
+ "inner_node.cpp"
+ "leaf_node.cpp"
+ "leaf_node.h"
+ "node.cpp"
+ "art.h"
+ "art.cpp"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/peiliang.lpl/myART/include/" (23863 52258 822134 634000) "./" "node.cpp" "node.h" "../" "inner_node.h" "leaf_node.h" "node4.h" "inner_node.cpp" "node4.cpp" "art.h" "art.cpp" "leaf_node.cpp")
+
+ ("/home/peiliang.lpl/.emacs.d/" (23862 51446 161888 904000) "eshell/" "./" "init.el" "../" "ac-comphist.dat" "backups/" "ido.last" "transient/" "elpa/" "auto-save-list/" "autosaves/")
+
+ ("/home/peiliang.lpl/" (23862 43799 502551 347000) ".bash_logout" ".swp" ".pki/" "./" ".screenrc" ".bash_history" "../" "libart/" ".bashrc" "adaptive-radix-tree/" "abxp/" ".bash_profile" "MyTest/" ".viminfo" ".ssh/" "myART/" ".emacs.d/" ".gnupg/")
+
+ ("/home/peiliang.lpl/myART/" (23862 43813 990830 600000) "./" "../" "include/")
+
+ ("/home/peiliang.lpl/adaptive-radix-tree/src/" (23862 43743 915480 21000) "./" "../" "example.cpp")
+
+ ("/home/peiliang.lpl/abxp/build_service/build_service/admin/" (23862 45321 180858 943000) "SlowNodeDetector.h" "ConfigValidator.cpp" "FatalErrorDiscoverer.h" "SingleBuilderTask.cpp" "ProcessorTaskGroupImpl.h" "test/" "SConscript" "GenerationTask.h" "FatalErrorChecker.h" "GenerationKeeper.h" "BrokerTopicKeeper.cpp" "PeriodMergeTrigger.cpp" "WorkerTable.h" "HeartbeatClosure.h" "RepartitionTaskController.cpp" "TaskMaintainer.cpp" "ConfigValidator.h" "WorkerTableBase.h" "AdminWorker.h" "WorkerTableBase.cpp" "TableMetaSynchronizerTaskController.h" "ProcessorWorkItem.cpp" "SingleMergeTaskManager.h" "JobTask.cpp" "AdminMetricsReporter.h" "GenerationMetricsReporter.h" "GenerationMetricsReporter.cpp" "DefaultTaskController.cpp" "ProcessorNodesUpdater.h" "HeartbeatDefine.h" "ProcessorNodesUpdater.cpp" "SingleMergeTaskManager.cpp" "ExtractDocTaskController.h" "MergeCrontab.cpp" "MergeTrigger.h" "CheckpointManager.cpp" "BuildTask.h" "CheckpointManager.h" "ServiceKeeper.h" "TableMetaSynchronizerTaskController.cpp" "SingleBuilderTask.h" "SlowNodeDetector.cpp" "TaskControllerFactory.h" "RpcHeartbeat.h" "TimelyProcessorNodesUpdater.h" "SingleMergerTask.h" "ProcessorTaskGroupImpl.cpp" "RpcHeartbeat.cpp" "BrokerTopicKeeper.h" "RoleNameGenerator.h" "BuildinTaskControllerFactory.cpp" "ProhibitedIpsTable.cpp" "ProcessorGroupChangingState.cpp" "TimelyProcessorNodesUpdater.cpp" "HeartbeatClosure.cpp" "CounterRedisCollector.h" "ServiceKeeperObsoleteDataCleaner.cpp" "FatalErrorChecker.cpp" "GenerationRecoverWorkItem.cpp" "FatalErrorDiscoverer.cpp" "TCMallocMemController.h" "ClusterCheckpoint.h" "DefaultProcessorNodesUpdater.h" "WorkerTable.cpp" "GenerationKeeper.cpp" "CounterFileCollector.h" "ProhibitedIpsTable.h" "ProcessorTaskGroup.h" "ServiceKeeperObsoleteDataCleaner.h" "ClusterStatus.h" "Heartbeat.cpp" "TCMallocMemController.cpp" "MergeTaskManager.cpp" "AdminWorker.cpp" "ProcessorGroupStateCreator.h" "ProhibitedIpCollector.h" "TaskControllerFactory.cpp" "ProhibitedIpCollector.cpp" "GenerationTaskBase.cpp" "BuildTask.cpp" "TaskController.h" "ZkHeartbeat.cpp" "CounterCollector.h" "GenerationRecoverWorkItem.h" "GenerationTask.cpp" "TaskController.cpp" "AdminTaskBase.h" "ProcessorGroupRunningState.h" "ProcessorTask.h" "ProcessorGroupStateCreator.cpp" "RepartitionTaskController.h" "PooledChannelManager.h" "AdminHealthChecker.cpp" "CounterRedisCollector.cpp" "ProcessorGroupRunningState.cpp" "MergeTrigger.cpp" "TaskSnapshotVersionApplicant.cpp" "ProcessorGroupChangingState.h" "DefaultProcessorNodesUpdater.cpp" "ZkHeartbeat.h" "SingleClusterTask.h" "AdminHealthChecker.h" "PeriodMergeTrigger.h" "WorkerNode.h" "ProcessorGroupState.h" "CounterCollector.cpp" "AdminTaskBase.cpp" "PooledChannelManager.cpp" "MergeCrontab.h" "ProcessorTask.cpp" "ProcessorGroupState.cpp" "CounterFileCollector.cpp" "AdminMetricsReporter.cpp" "WorkerNode.cpp" "Admin.proto" "SingleClusterTask.cpp" "AppPlanMaker.cpp" "ProcessorWorkItem.h" "ExtractDocTaskController.cpp" "ClusterStatus.cpp" "WorkerNodeCreator.h" "Heartbeat.h" "TaskSnapshotVersionApplicant.h" "RoleNameGenerator.cpp" "BuildinTaskControllerFactory.h" "ProcessorTaskGroup.cpp" "AppPlanMaker.h" "DefaultTaskController.h" "MergeTaskManager.h" "JobTask.h" "TaskMaintainer.h" "SingleMergerTask.cpp" "GenerationTaskBase.h" "ClusterCheckpoint.cpp" "ServiceKeeper.cpp" "../" "./")
+
+ ("/home/peiliang.lpl/MyTest/gtest_test/" (23861 27552 509859 863000) "SConstruct" "./" "../" ".sconsign.dblite" "test1.cpp")
+
+ ("/home/peiliang.lpl/abxp/build_service/build_service/test/" (23828 31787 409513 695000) "SConscript" "unittest.h" "./" "../" "dotest.cpp" "test.h.in" "bs_alog.conf")
+
+ ("/usr/" (22461 42911 0 0) "lib/" "taobao/" "man/" "share/" "alisys/" "libexec/" "games/" "bin/" "ali/" "local/" "sbin/" "tmp/" "../" "src/" "./" "include/" "etc/" "lib64/")
+
+ ("/home/" (23855 40897 235862 236000) "kezhong.ykz/" "dongdong.shan/" "bieli.lt/" "admin/" "xiaocheng.zxc/" "xiangle.xl.DEL/" "zhaogui.xzg/" "lingyu/" "hongmeng.DEL/" "dezhi.wangdezhi.DEL/" "ye.chai.DEL/" "shuiwang.gsw/" "zhilong.caizl/" "weichao.cwc.DEL/" "qingran.yz/" "doranbin.zhu/" "jinqiang.kjq.DEL/" "jinsong.yjs.DEL/" "yongxing.jh.DEL/" "peng.z.DEL/" "mingzhi.wj/" "jenson/" "mantang.yang.DEL/" "lianjiang.yulj.DEL/" "xiaochang.sxc/" "ningzhuo.xh.DEL/" "fanye.DEL/" "dongchong.dc/" "lantao/" "yunshu.xw.DEL/" "wanxi.dengwx/" "chaoxiong.lcx.DEL/" "huocha.csq.DEL/" "lingsheng.wls.DEL/" "ahao.mah.DEL/" "hwnoc/" "yixuan.ly/" "haohao.hhh.DEL/" "jerry.zxt/" "yueyang.hyy.DEL/" "minghao.xmh.DEL/" "wanghua.wh.DEL/" "shichang.sc.DEL/" "aquota.group" "linxuan.DEL/" "huitian.tang/" "yang.gu/" "yiyan.jyj/" "jianyi.wjy/" "gengwei.gw.DEL/" "denial.lbb.DEL/" "jun.tangjun.bak/" "hongbo.weihb.DEL/" "xiayou.zk.DEL/" "zouxu.zx/" "xiaoyong.liu.DEL/" "a/" "ziwen.jzw.DEL/" "t4/" "shichang.hsc/" "xiaoluo.hc/" "baisha.lf/" "yewang.DEL/" "lei.xu.DEL/" "shenling.yyb.DEL/" "guiche.zj/" "lijun.slj.DEL/" "xiongyi.xy.DEL/" "yujing.zc/" "weiyi.lwy/" "happy.lij.DEL/" "sdd/" "ken.wd.DEL/" "pengyu.zhaopy/" "weijun.ni.DEL/" "zq103303/" "hanlong.ly.DEL/" "zhenhua.wu.DEL/" "guangran.jianggr/" "xingming.xuxm.DEL/" "guangfan.qu/" "haochuan.shc.DEL/" "xinjing.wj/" "hantang.cj/" "shiautsung.wxc/" "wenwei.tww.DEL/" "liukan.lk/" "huangzheng.hz.DEL/" "peiliang.lpl/" "xueduo.cx/" "zhengning.zn.DEL/" "hanyao.hy/" "wister.zwz/" "caikang.ck/" "qingyu.sxc.DEL/" "liuxi.rf.DEL/" "zhengyang.zy.DEL/" "hongqing.hu.DEL/" "xsank.mz.DEL/" "frank.hx.DEL/" "cjxrobot/" "haikai.chk/" "liuyongtao.lyt/" "agent/" "wanxi.dengwx2019-07-11/" "chenjian.chj2019-06-11/" "postgres/" "zhongyou.dlx.DEL/" "zhongxian.xzx/" "zhenzhou.z.DEL/" "guicheng.cgc.DEL/" "takong.DEL/" "randeng.DEL/" "zyh.zyh.DEL/" "raymond.sunym/" "shiwei.shiw/" "yixiao.wxw.DEL/" "lingzun.cyb.DEL/" "chenjian.chj/" "xijie.xuxj.DEL/" "jinhang.jh.DEL/" "jiayu/" "jiaming.tjm/" "vagetabler.lsh2018-08-06/" "yunji.qw/" "xianpeng.lxp.DEL/" "haiyu.hanghy/" "yanan.yn/" "xinnan.lxn.DEL/" "aron.wxf/" "yuling.yl/" "chekong.ygm/" "shaozhi.liu/" "ziyu.yl.DEL/" "leilei.lin2016-09-29/" "mingjiang.jiangmj.DEL/" "staragent/" "zhongmou.llp.DEL/" "rufei.crf.DEL/" "miller.ljy.DEL/" "yuanhui.myh.DEL/" "haoran.jhr/" "shili.sl.DEL/" "yaowei.cyw.DEL/" "wanglili.wl/" "boyi.wb.DEL/" "dingjian.qk/" "jian.song.DEL/" "luoli.hn/" "zongyuan.wuzy/" "patrick.lcj.DEL2019-02-2300:01:02/" "zyh.zyh2018-04-21/" "hippo/" "xide.ql/" "yijie.zhang/" "guangwang.ligw.DEL/" "anwei.aw.DEL/" "qingming.lxj/" "yx80294/" "chris.zn.DEL/" "vagetabler.lsh/" "jingyi.mjy.DEL/" "junxing.wsl.DEL/" "yueyangh/" "jiangcai.zjc.DEL/" "chaoxiang.lcx/" "wuxia.sr/" "guying.DEL/" "xu.zhao.DEL/" "ganbin.zgb/" "yida.ywq/" "docker/" "gongda.cx2019-06-25/" "hadoop/" "jun.tangjun/" "tops/" "yichen.lyh.DEL/" "qiyan.zm/" "shaofeng.jsf/" "xuedi.stt.DEL/" "xinfei.sxf/" "luren.ygd/" "xieqing.tyg/" "chenggang.qcg2018-01-26/" "yuanhan.DEL/" "wls/" "gangfeng.ygf/" "dingjian.qk2019-06-28/" "zhisheng.xzs/" "xiongwei.jiang.DEL/" "guodong.wzh.DEL/" "yujing.zc2019-06-20/" "chaoxiang.lcx2019-06-11/" "yangyi.czh.DEL/" "alex.sh/" "logs/" "shari.zhaol.DEL/" "qiyan.zm2019-06-18/" "yupeng.chenyp.DEL/" "saijin.zsj/" "chenggang.qcg.DEL/" "lingjun.zlj.DEL/" "zj125135/" "qiang.zhouq.DEL/" "yifeng.dongyifeng/" "wangdong.wd.DEL/" "hongbin.zhouhb/" "kongshi.yks.DEL/" "liang.yel.DEL/" "zilong.xzl.DEL/" "qianlong.ql.DEL/" "chundu.zzh/" "jiaxiong.xu/" "qiulin.nql.DEL/" "yanjun.lyj.DEL/" "lanyao.xj.DEL/" "xingwang.liuxw/" "biandi.bd.DEL/" "jingyi.mjy2018-01-26/" "ljw2083.DEL/" "zhouhb/" "timetunnel/" "shili.lzy/" "qingming.lxj2017-12-28/" "chengdu.lbx.DEL/" "xiaorong.xr/" "wanqiang.mwq.DEL/" "hanjie.hj/" "jinglei.syh.DEL/" "xiubin.wxb/" "arthur.xw.DEL/" "zherui.yzr.DEL/" "xiping.lx.DEL/" "liangtian.qlt.DEL/" "guren.xf.DEL/" "jackson.zhouq.DEL/" "home/" "yingsheng.zjs.DEL/" "cici.cs.DEL/" "taiyun.zj/" "shiliang.csl/" "leilei.lin.DEL/" "fuxiang.fx/" "ads/" "yucheng.yc/" "wujiawei.DEL/" "yuhan.wangyh/" "gongda.cx/" "spark.sy.DEL/" "mogu.lwp.DEL/" "qingling.wj.DEL/" "yangxi.yx.DEL/" "youben.yyb.DEL/" "yuxiong.wangyx.DEL/" "kangrui.ckr/" "hadoop.devel/" "chenyi.zy.DEL/" "dongbin.db/" "xuanzhe.lty/" "liang.haol/" "shenmin.sm/" "mingzhi.wj2018-10-19/" "fangxiao.cfx/" "hongju.xhj.DEL/" "qicheng.lqc.DEL/" "xingwang.liuxw2019-06-14/" "jingsong.yjs/" "david.czh/" "ruohan.chen2016-09-25/" "guanming.fh/" "tao.lant/" "zuwen.fzw.DEL/" "david.cz/" "tonglu.zhb.DEL/" "richard.sy/" "audit/" "lingyu.lj/" "zhengbo.wzb/" "pengliang.pl.DEL/" "shuiwang.gsw2019-01-18/" "zhangyupeng.zyp.DEL/" "hadoop.tar" "yuanliang.wyl.DEL/" "peter.pt.DEL/" "../" "./")
+
+ ("/home/peiliang.lpl/libart/" (23861 23062 644889 486000) "SConstruct" "./" "LICENSE" "../" "tests/" ".gitignore" "deps/" "test_runner" ".lvimrc" ".travis.yml" "core-1334921-libart.so-24053-1563349966" ".sconsign.dblite" "libart.so" ".git/" "README.md" "src/")
+
+ ("/home/peiliang.lpl/libart/src/" (23861 22792 70654 970000) "./" "art.os" "../" "art.c" "art.h")
+
+ ("/home/peiliang.lpl/.emacs.d/auto-save-list/" (23828 35758 863192 384000) "./" "../" ".saves-56752-s101193199.et2sqa~")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
