@@ -14,11 +14,11 @@
 ;; ========================= set default tab =====================
 ;; when true, emacs use mixture of tab and space to achieve offset
 (setq-default indent-tabs-mode nil)
-(setq default-tab-width 2)
+(setq default-tab-width 4)
 ;(setq tab-stop-list())
-(setq c-default-style "linux" c-basic-offset 2)
-(setq-default c-basic-offset 2)        ; control length used to offset.
-(setq-default tab-width 2)              ; control how emacs explain TAB.
+(setq c-default-style "linux" c-basic-offset 4)
+(setq-default c-basic-offset 4)        ; control length used to offset.
+(setq-default tab-width 4)              ; control how emacs explain TAB.
 
 ;; ido配置
 (ido-mode 1)
@@ -33,7 +33,7 @@
 ;; =========================
 ;; 启动页面
 ;; =========================
-(load-theme 'monokai t)
+;(load-theme 'zenburn t)
 ; 关闭启动页面
 (setq inhibit-startup-message t)
 ; 启动eshellload
@@ -58,7 +58,7 @@
     ("1d2f406a342499f0098f9388b87d05ec9b28ccb12ca548f4f5fa80ae368235b6" "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
  '(package-selected-packages
    (quote
-    (monokai-pro-theme auto-complete monokai-theme magit))))
+    (zenburn-theme monokai-pro-theme auto-complete magit))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
