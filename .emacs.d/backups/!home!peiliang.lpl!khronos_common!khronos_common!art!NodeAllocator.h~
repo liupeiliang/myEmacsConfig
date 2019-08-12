@@ -1,0 +1,29 @@
+#pragma once
+
+#include "khronos_common/CommonDefine.h"
+#include "autil/mem_pool/Pool.h"
+#include "khronos_common/art/Node.h"
+#include <stdint.h> 
+
+namespace khronos_common {
+namespace art {
+
+class NodeAllocator
+{
+public:
+    NodeAllocator();
+    ~NodeAllocator();
+
+public:
+    Node* CreateNode(size_t dataSize);
+    void DestoryNode(Node* node, size_t dataSize);
+    
+private:
+    autil::mem_pool::Pool pool;
+    AUTIL_LOG_DECLARE();
+};
+
+KR_DEFINE_SHARED_PTR(NodeAllocator);
+
+} // namespace art
+} // namespace khronos

@@ -1,0 +1,25 @@
+#pragma once
+
+#include "khronos_common/CommonDefine.h"
+
+namespace khronos_common {
+namespace art {
+
+class ArtSetIterator
+{
+public:
+    ArtSetIterator();
+    ~ArtSetIterator();
+
+public:
+    string Next();
+    
+    
+private:
+    AUTIL_LOG_DECLARE();
+};
+
+KR_DEFINE_SHARED_PTR(ArtSetIterator);
+
+} // namespace art
+} // namespace khronos

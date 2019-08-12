@@ -1,0 +1,19 @@
+#include "khronos_common/art/Art.h"
+
+using namespace std;
+
+namespace khronos_common {
+namespace art {
+
+AUTIL_LOG_SETUP(khronos.art, Art);
+
+Art::Art()
+{
+}
+
+Art::~Art()
+{
+}
+    
+} // namespace art
+} // namespace khronos

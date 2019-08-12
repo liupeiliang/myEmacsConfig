@@ -1,0 +1,21 @@
+#pragma once
+
+#include "khronos_common/CommonDefine.h"
+
+namespace khronos_common {
+namespace art {
+
+class LeafNode64
+{
+public:
+    LeafNode64();
+    ~LeafNode64();
+
+private:
+    AUTIL_LOG_DECLARE();
+};
+
+KR_DEFINE_SHARED_PTR(LeafNode64);
+
+} // namespace art
+} // namespace khronos

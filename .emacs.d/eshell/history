@@ -1,21 +1,4 @@
 ls
-scp 10.101.193.223:/home/qingran.yz/.emacs.d/init.el ~/.emacs.d/
-scp hippo@10.101.193.223:/home/qingran.yz/.emacs.d/init.el ~/.emacs.d/
-cd
-ls
-ls
-cd ..
-l
-sls
-ls
-cd ..
-ls
-cd abxp
-ls
-cd build_service/
-ls
-cd build_service/
-ls
 cd admin
 ls
 ks
@@ -34,4 +17,112 @@ ls
 ls
 ls
 ls
+ls
+ls
+ls -a
+ls
+ls
+ls
+cd ..
+ls
+cd art
+ls
+cd test
+ls
+ls
+../../../scripts/newtest.py ArtSet
+ls
+ls
+rm -f TestArtSetTest.cpp 
+ls
+ls
+cd test
+ls
+../../../scripts/newtest.py NodeAllocator
+ls
+rm -f TestArtSetTest.cpp 
+ls
+ls
+cd ..
+ls
+ls
+ls
+ls
+cd test
+ls
+cd ..
+cd ..
+cd ..
+ls
+scons -j 10 -u.
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+ls
+cd khronos_common/
+ls
+cd art
+ls
+cd test
+../../../scripts/newtest.py Node4
+../../../scripts/newtest.py Node16
+../../../scripts/newtest.py Node48
+../../../scripts/newtest.py Node256
+ls
+ls
+cd ....
+ls
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+/bin/env PATH=/usr/local/bin:/usr/bin:.:/usr/lib/jvm/java-1.8.0/bin:/usr/lib64/qt-3.3/bin:/sbin:/usr/local/sbin:/usr/sbin:/usr/X11R6/bin:/home/hippo/hadoop-3.0.3/bin:/home/hippo/hadoop-3.0.3/sbin:/home/fengyuan.mfy/maven/apache-maven-3.6.1/bin:/home/peiliang.lpl/.local/bin:/home/peiliang.lpl/bin LD_LIBRARY_PATH=/usr/ali/java/jre/lib/amd64/server/:/usr/ali/java/jre/lib/amd64/:/home/peiliang.lpl/khronos_common/build/release64/lib:/usr/local/lib64:/usr/local/lib:/usr/lib64:/usr/lib /home/peiliang.lpl/khronos_common/build/release64/khronos_common/art/test/art_test
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+scons -j 10 -u .
+ls
+cd khronos_common/
+ls
+cd ..
+ls
+cd lib/
+ls
+cd ..
+cd khronos_common/
+ls
+cd util/
+ls
+cd ..
+cd ..
+cd ..
+cd ..
+ls
+cd peiliang.lpl/
+ls
+ls
+cd khronos_common/
+cd khronos_common/
+ls
+ls
+cd aryt
+cd art
+ls
+ls
+ls
+ls
+cd ...
+cd ..
+ls -a
+cd .emacs.d/
 ls

@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        if( n == 0 ) return;
+        int half = (n+1)>>1;
+        for(int i = 0; i <= half; i++){
+            for(int j = 0; j <= half; j++){
+                int x = i, y = j;
+                for(int k = 0; k < 4; k++){
+                    int xx = x, yy = y;
+                    x = n-yy-1;
+                    y = xx;
+                    swap(matrix[x][y], matrix[xx][yy]);
+                }
+            }
+        }
+    }
+};
+
+int main()
+{
+    return 0;
+}

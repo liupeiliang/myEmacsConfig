@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int dx[]={0, 1, 0, -1};
+    int dy[]={1, 0, -1, 0};
+    
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        vector<int> v; v.clear();
+        if(n == 0) return v;
+        int m = matrix[0].size();
+        if(m == 0) return v;
+        int dir = 0, x = 0, y = 0;
+        for(int T = n*m; T > 1; T--){
+            
+        }
+
+    }
+};
+
+int main()
+{
+    return 0;
+}

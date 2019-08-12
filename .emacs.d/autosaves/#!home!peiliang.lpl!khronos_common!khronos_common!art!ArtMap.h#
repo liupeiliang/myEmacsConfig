@@ -1,0 +1,32 @@
+#pragma once
+
+#include "khronos_common/CommonDefine.h"
+#include "khronos_common/art/Art.h"
+#include "khronos_common/art/ArtMapIterator.h"
+#include <string>
+
+namespace khronos_common {
+namespace art {
+
+class ArtMap
+{
+public:
+    ArtMap();
+    ~ArtMap();
+
+public:
+    typedef ArtMapIterator Iterator;
+
+public:
+    bool Find(const std::string& key, uint64_t& value) const;
+    Iterator SearchPrefix(const std::string& prefix) const;
+    bool Insert(const std::string& key, const uint64_t& value);
+
+private:
+    AUTIL_LOG_DECLARE();
+};
+
+KR_DEFINE_SHARED_PTR(ArtMap);
+
+} // namespace art
+} // namespace khronos

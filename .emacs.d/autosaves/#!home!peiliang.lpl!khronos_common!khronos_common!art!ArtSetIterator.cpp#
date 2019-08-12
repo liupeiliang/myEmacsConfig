@@ -1,0 +1,20 @@
+#include "khronos_common/art/ArtSetIterator.h"
+
+using namespace std;
+
+namespace khronos_common {
+namespace art {
+
+AUTIL_LOG_SETUP(khronos.art, ArtSetIterator);
+
+ArtSetIterator::ArtSetIterator()
+{
+}
+
+ArtSetIterator::~ArtSetIterator()
+{
+}
+
+
+} // namespace art
+} // namespace khronos

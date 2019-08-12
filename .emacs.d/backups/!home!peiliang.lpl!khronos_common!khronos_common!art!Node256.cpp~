@@ -1,0 +1,85 @@
+#include "khronos_common/art/Node256.h"
+
+using namespace std;
+
+namespace khronos_common {
+namespace art {
+
+AUTIL_LOG_SETUP(khronos.art, Node256);
+
+Node256::Node256()
+{
+    maxPrefixLen = 12;
+    nodeType = NODE256;
+}
+
+Node256::~Node256()
+{
+}
+
+Node* Node256::FindChild(uint8_t partialKey) const
+{
+    return children[partialKey];
+}
+
+void Node256::SetChild(uint8_t partialKey, Node* child)
+{
+    // get risk ?
+    children[partialKey] = child;
+    ++childrenNumber;
+}
+
+void Node256::DelChild(uint8_t partialKey, Node* child)
+{
+    // dont need
+    return;
+}
+
+InnerNode* Node256::Grow()
+{
+    //uncompleted;
+    InnerNode* tem = NULL;
+    return tem;
+}
+
+InnerNode* Node256::Shrink()
+{
+    // dont need
+    InnerNode* tem = NULL;
+    return tem;
+}
+
+bool Node256::IsFull() const
+{
+    return (childrenNumber == 256);
+}
+
+bool Node256::IsUnderfull() const
+{
+    return (childrenNumber <= 48);
+}
+
+uint8_t Node256::GetChildrenNumber() const
+{
+    return this->childrenNumber;
+}
+
+uint8_t Node256::GetNodeType() const
+{
+    return this->nodeType;
+}
+
+uint8_t Node256::NextPartialKey(uint8_t partialKey) const
+{
+    // dont need
+    return 0;
+}
+
+uint8_t Node256::PrevPartialKey(uint8_t partialKey) const
+{
+    // dont need
+    return 0;
+}
+    
+} // namespace art
+} // namespace khronos

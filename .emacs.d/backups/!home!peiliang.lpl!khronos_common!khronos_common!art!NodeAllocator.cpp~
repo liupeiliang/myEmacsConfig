@@ -1,0 +1,30 @@
+#include "khronos_common/art/NodeAllocator.h"
+
+using namespace std;
+
+namespace khronos_common {
+namespace art {
+
+AUTIL_LOG_SETUP(khronos.art, NodeAllocator);
+
+NodeAllocator::NodeAllocator()
+{
+}
+
+NodeAllocator::~NodeAllocator()
+{
+}
+
+Node* NodeAllocator::CreateNode(size_t dataSize)
+{
+    return (Node*)pool.allocate(dataSize);
+}
+
+void NodeAllocator::DestoryNode(Node* node, size_t dataSize)
+{
+    uint8_t* mem = (uint8_t*)node;
+    pool.deallocate(mem, dataSize);
+}
+
+} // namespace art
+} // namespace khronos

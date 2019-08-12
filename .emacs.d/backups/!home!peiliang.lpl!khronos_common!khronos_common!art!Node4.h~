@@ -1,0 +1,55 @@
+#pragma once
+
+#include "khronos_common/CommonDefine.h"
+#include "khronos_common/art/InnerNode.h"
+#include "khronos_common/art/NodeAllocator.h"
+#include "khronos_common/art/Node16.h"
+
+namespace khronos_common {
+namespace art {
+
+class Node4 : public InnerNode
+{
+    friend class Node16;
+    
+public:
+    Node4();
+    ~Node4();
+
+    Node* FindChild(uint8_t partialKey) const;
+    void SetChild(uint8_t partialKey, Node* child);
+    void DelChild(uint8_t partialKey, Node* child);
+
+    void Grow(Node16* newNode) const;
+    InnerNode* Shrink();
+
+    bool IsFull() const ;
+    bool IsUnderfull() const ;
+
+    uint8_t GetChildrenNumber() const ;
+    uint8_t GetNodeType() const ;
+
+    uint8_t NextPartialKey(uint8_t partialKey) const ;
+    uint8_t PrevPartialKey(uint8_t partialKey) const ;
+    
+    void printNode() const ;
+    
+private:
+    // 4(header) + 4 + 8 + 4*8 = 48 bytes
+    
+    //const uint8_t maxPrefixLen = 8;
+    //uint8_t prefixLen;
+    //uint8_t childrenNumber;
+    //uint8_t nodeType;
+    
+    uint8_t keys[4];
+    uint8_t prefix[8];
+    Node* children[4];
+    
+    AUTIL_LOG_DECLARE();
+};
+
+KR_DEFINE_SHARED_PTR(Node4);
+
+} // namespace art
+} // namespace khronos

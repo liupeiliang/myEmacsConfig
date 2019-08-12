@@ -1,0 +1,92 @@
+#include "khronos_common/art/Node16.h"
+
+using namespace std;
+
+namespace khronos_common {
+namespace art {
+
+AUTIL_LOG_SETUP(khronos.art, Node16);
+
+Node16::Node16()
+{
+    maxPrefixLen = 12;
+    nodeType = NODE16;
+}
+
+Node16::~Node16()
+{
+}
+
+Node* Node16::FindChild(uint8_t partialKey) const
+{
+    // TODO: SIMD compare / binary search
+    for(int i = 0; i < childrenNumber; i++){
+        if(keys[i] == partialKey){
+            return children[i];
+        }
+    }
+    return nullptr;
+}
+
+void Node16::SetChild(uint8_t partialKey, Node* child)
+{
+    // TODO: sorted
+    keys[childrenNumber] = partialKey;
+    children[childrenNumber] = child;
+    // atomic ; MemoryBarrier ?
+    ++childrenNumber;
+}
+
+void Node16::DelChild(uint8_t partialKey, Node* child)
+{
+    // dont need
+}
+
+InnerNode* Node16::Grow()
+{
+    //uncompleted;
+    InnerNode* tem = NULL;
+    return tem;
+}
+
+InnerNode* Node16::Shrink()
+{
+    // dont need
+    InnerNode* tem = NULL;
+    return tem;
+}
+
+bool Node16::IsFull() const
+{
+    return (childrenNumber == 16);
+}
+
+bool Node16::IsUnderfull() const
+{
+    return (childrenNumber <= 4);
+}
+
+uint8_t Node16::GetChildrenNumber() const 
+{
+    return this->childrenNumber;
+}
+
+uint8_t Node16::GetNodeType() const
+{
+    return this->nodeType;
+}
+
+uint8_t Node16::NextPartialKey(uint8_t partialKey) const
+{
+    // dont need
+    return 0;
+}
+
+uint8_t Node16::PrevPartialKey(uint8_t partialKey) const
+{
+    // dont need
+    return 0;
+}
+
+} // namespace art
+} // namespace khronos

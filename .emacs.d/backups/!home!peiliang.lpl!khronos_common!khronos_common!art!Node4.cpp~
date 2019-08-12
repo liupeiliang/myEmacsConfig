@@ -1,0 +1,111 @@
+#include "khronos_common/art/Node4.h"
+
+using namespace std;
+
+namespace khronos_common {
+namespace art {
+
+AUTIL_LOG_SETUP(khronos.art, Node4);
+
+Node4::Node4()
+{
+    maxPrefixLen = 8;
+    nodeType = NODE4;
+}
+
+Node4::~Node4()
+{
+}
+
+Node* Node4::FindChild(uint8_t partialKey) const
+{
+    for(int i = 0; i < childrenNumber; i++){
+        if(keys[i] == partialKey){
+            return children[i];
+        }
+    }
+    return nullptr;
+}
+
+void Node4::SetChild(uint8_t partialKey, Node* child)
+{
+    // TODO: sorted
+    keys[childrenNumber] = partialKey;
+    children[childrenNumber] = child;
+    // atomic ; MemoryBarrier ?
+    ++childrenNumber;
+}
+
+void Node4::DelChild(uint8_t partialKey, Node* child)
+{
+    // dont need deletion
+}
+
+void Node4::Grow(Node16* newNode) const
+{
+    //uncompleted;  attention: sync
+//    NodeAllocator nodeAllocator;
+//    Node16* newNode = (Node16*)nodeAllocator.CreateNode(NODE16);
+    
+    newNode->prefixLen = this->prefixLen;
+    newNode->childrenNumber = this->childrenNumber;
+    
+    std::copy(this->prefix, this->prefix + this->prefixLen,
+              newNode->prefix);
+    std::copy(this->keys, this->keys + this->childrenNumber,
+              newNode->keys);
+    std::copy(this->children,
+              this->children + this->childrenNumber,
+              newNode->children);
+
+    return newNode;
+}
+
+InnerNode* Node4::Shrink()
+{
+    throw std::runtime_error("Node4 cant shrink !");
+}
+
+bool Node4::IsFull() const
+{
+    return (childrenNumber == 4);
+}
+
+bool Node4::IsUnderfull() const
+{
+    return false;
+}
+
+uint8_t Node4::GetChildrenNumber() const
+{
+    return this->childrenNumber;
+}
+
+uint8_t Node4::GetNodeType() const
+{
+    return this->nodeType;
+}
+
+uint8_t Node4::NextPartialKey(uint8_t partialKey) const
+{
+    // dont need
+    return 0;
+}
+
+uint8_t Node4::PrevPartialKey(uint8_t partialKey) const
+{
+    // dont need
+    return 0;
+}
+
+void Node4::printNode() const
+{
+    printf("nodeType : %s\n", NODE4 ? "NODE4" : "ERROR");
+    printf("maxPrefixLen : %d\n", maxPrefixLen);
+    printf("prefixLen : %d\n", prefixLen);
+    printf("childrenNumber : %d\n", childrenNumber);
+    
+}
+    
+} // namespace art
+} // namespace khronos

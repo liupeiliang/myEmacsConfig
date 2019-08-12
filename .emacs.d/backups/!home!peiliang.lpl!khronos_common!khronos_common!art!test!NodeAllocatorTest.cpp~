@@ -1,0 +1,51 @@
+#include "khronos_common/test/unittest.h"
+#include "khronos_common/art/NodeAllocator.h"
+#include "khronos_common/art/Node.h"
+#include "khronos_common/art/Node4.h"
+#include "khronos_common/art/Node16.h"
+#include "khronos_common/art/Node48.h"
+#include "khronos_common/art/Node256.h"
+
+using namespace std;
+using namespace testing;
+
+namespace khronos_common {
+namespace art {
+
+class NodeAllocatorTest : public KHRONOS_TESTBASE {
+public:
+    void caseSetUp()
+    {
+    }
+    void caseTearDown()
+    {
+    }
+private:
+
+};
+
+TEST_F(NodeAllocatorTest, testCreateNode)
+{
+    NodeAllocator nodeAllocator;
+    Node4* node4 = (Node4*)nodeAllocator.CreateNode(sizeof(Node4));
+    node4->prefixLen = 5;
+    node4->keys[0] = 97;
+    node4->keys[1] = 65;
+    node4->childrenNumber = 2;
+
+    Node4 t = *node4;
+    ASSERT_EQ(t.prefixLen, 5);
+    ASSERT_EQ(t.childrenNumber, 2);
+    ASSERT_EQ(t.keys[0], 97);
+    ASSERT_EQ(t.keys[1], 65);
+
+    node4->~Node4();
+    nodeAllocator.DestoryNode(node4, sizeof(Node4));
+    ASSERT_TRUE(node4->prefixLen == 5);
+//    Node16* node16 = (Node16*)nodeAllocator.CreateNode(sizeof(Node16));
+//    Node48* node48 = (Node48*)nodeAllocator.CreateNode(sizeof(Node48));
+}
+    
+
+} // namespace art
+} // namespace khronos

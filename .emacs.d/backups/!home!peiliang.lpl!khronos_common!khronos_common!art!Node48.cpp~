@@ -1,0 +1,88 @@
+#include "khronos_common/art/Node48.h"
+
+using namespace std;
+
+namespace khronos_common {
+namespace art {
+
+AUTIL_LOG_SETUP(khronos.art, Node48);
+
+Node48::Node48()
+{
+    maxPrefixLen = 12;
+    nodeType = NODE48;
+}
+
+Node48::~Node48()
+{
+}
+
+Node* Node48::FindChild(uint8_t partialKey) const
+{
+    uint8_t tem = index[partialKey];
+    if(tem == 48) return nullptr;
+    return children[tem];
+}
+
+void Node48::SetChild(uint8_t partialKey, Node* child)
+{
+    // uncompleted
+    children[childrenNumber] = child;
+    ++childrenNumber;
+    // barrier
+    index[partialKey] = childrenNumber-1;
+}
+
+void Node48::DelChild(uint8_t partialKey, Node* child)
+{
+    // dont need
+}
+
+InnerNode* Node48::Grow()
+{
+    // uncompleted
+    InnerNode* tem = NULL;
+    return tem;
+}
+
+InnerNode* Node48::Shrink()
+{
+    // dont need
+    InnerNode* tem = NULL;
+    return tem;
+}
+
+bool Node48::IsFull() const
+{
+    return (childrenNumber == 48);
+}
+
+bool Node48::IsUnderfull() const
+{
+    return (childrenNumber <= 16);
+}
+
+uint8_t Node48::GetChildrenNumber() const
+{
+    return this->childrenNumber;
+}
+
+uint8_t Node48::GetNodeType() const
+{
+    return this->nodeType;
+}
+
+uint8_t Node48::NextPartialKey(uint8_t partialKey) const
+{
+    // dont need
+    return 0;
+}
+
+uint8_t Node48::PrevPartialKey(uint8_t partialKey) const
+{
+    // dont need
+    return 0;
+}
+
+} // namespace art
+} // namespace khronos

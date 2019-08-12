@@ -1,0 +1,24 @@
+#include "khronos_common/test/unittest.h"
+#include "khronos_common/art/LeafNode.h"
+
+using namespace std;
+using namespace testing;
+
+namespace khronos_common {
+namespace art {
+
+class LeafNodeTest : public KHRONOS_TESTBASE {
+public:
+    void caseSetUp()
+    {
+    }
+    void caseTearDown()
+    {
+    }
+private:
+
+};
+
+
+} // namespace art
+} // namespace khronos

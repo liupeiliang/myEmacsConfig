@@ -33,7 +33,7 @@
 ;; =========================
 ;; 启动页面
 ;; =========================
-;(load-theme 'zenburn t)
+;(load-theme 'monokai t)
 ; 关闭启动页面
 (setq inhibit-startup-message t)
 ; 启动eshellload
@@ -111,11 +111,11 @@
    (windmove-default-keybindings))
 
 ; 方向控制 
-(global-set-key (kbd "C-<right>") 'other-window) ;windmove-right)
-(global-set-key (kbd "C-<left>") (lambda() (interactive) (other-window -1)))
+(global-set-key (kbd "C-x <right>") 'windmove-right);'other-window
+(global-set-key (kbd "C-x <left>") 'windmove-left) ;(lambda() (interactive) (other-window -1)))
 
-(global-set-key (kbd "C-<up>") 'ff-get-other-file) ;windmove-up)
-(global-set-key (kbd "C-<down>") 'ff-get-other-file) ;windmove-down)
+(global-set-key (kbd "C-x <up>")  'windmove-up);'ff-get-other-file)
+(global-set-key (kbd "C-x <down>") 'windmove-down);'ff-get-other-file) 
 
 (global-set-key (kbd "<ESC><up>") (lambda() (interactive) (scroll-down 5)))
 (global-set-key (kbd "<ESC><down>") (lambda() (interactive) (scroll-up 5)))
@@ -144,7 +144,7 @@
 (global-set-key (kbd "C-c l") 'goto-line)
 
 ; 显示行号
-(global-set-key (kbd "C-c C-l") 'linum-mode)
+(global-set-key (kbd "C-c C-t") 'linum-mode)
 
 ; find grep
 (global-set-key (kbd "C-c g") 'grep)
@@ -184,13 +184,13 @@
 (global-set-key (kbd "<f5>") 'revert-buffer)
 
 ; magit
-(defun magit-blame-toggle ()
-  "magit blame mode toggle "
-  (interactive)
-  (if magit-blame-mode
-      (magit-blame-quit)
-    (magit-blame)))
-(global-set-key (kbd "C-c b") 'magit-blame-toggle)
+;(defun magit-blame-toggle ()
+;  "magit blame mode toggle "
+;  (interactive)
+;  (if magit-blame-mode
+;      (magit-blame-quit)
+;    (magit-blame)))
+;(global-set-key (kbd "C-c b") 'magit-blame-toggle)
 ;(global-set-key (kbd "C-c m") 'magit-status)
 
 ; 在当前文件夹grep当前选中的部分，未选中时grep当前单词
@@ -217,24 +217,24 @@
 (global-set-key [f8] 'gud-break)
 
 ;; ======================= git & magit ============================
-(require 'magit)
-(eval-after-load 'magit
-  '(progn
-     (set-face-foreground 'diff-added "yellow")
-     (set-face-foreground 'diff-removed "red")))
+;(require 'magit)
+;(eval-after-load 'magit
+;  '(progn
+;     (set-face-foreground 'diff-added "yellow")
+;     (set-face-foreground 'diff-removed "red")))
 
  
-(defun call-magit-status()
-  "open magit status"
-  (interactive) (call-interactively 'magit-status))
-(global-set-key (kbd "C-x g") 'call-magit-status)
+;(defun call-magit-status()
+;  "open magit status"
+;  (interactive) (call-interactively 'magit-status))
+;(global-set-key (kbd "C-x g") 'call-magit-status)
 
-(eval-after-load "vc-annotate"
-'(defun vc-git-annotate-command (file buf &optional rev)
-  (let ((name (file-relative-name file)))
-    (vc-git-command buf 'async nil "blame" "--date=iso" rev "--" name))))
+;(eval-after-load "vc-annotate"
+;'(defun vc-git-annotate-command (file buf &optional rev)
+;  (let ((name (file-relative-name file)))
+;    (vc-git-command buf 'async nil "blame" "--date=iso" rev "--" name))))
 
 ;; ==================== debug ====================
-(require 'compile)
-(add-to-list 'compilation-error-regexp-alist
-             '("build/debug64/\\([a-zA-Z0-9_/\\.]+\\):\\([[:digit:]]+\\):\\([[:digit:]]+\\):.*$" 1 2 3))
+;(require 'compile)
+;(add-to-list 'compilation-error-regexp-alist
+;             '("build/debug64/\\([a-zA-Z0-9_/\\.]+\\):\\([[:digit:]]+\\):\\([[:digit:]]+\\):.*$" 1 2 3))
